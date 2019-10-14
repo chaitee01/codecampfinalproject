@@ -6,6 +6,7 @@
 
 body{
     background-color: #f7f7f7;
+
 }
 
 i {
@@ -14,11 +15,16 @@ i {
     font-size: 1.8em;
     color: #ee0000;
 }
+
+.select{
+    
+}
 .headicon {
     color: white;
     text-align: center;
     vertical-align: middle;
     margin-right: 3px;
+    font-size: 1.9rem;
 }
 .container1 {
     display: flex;
@@ -41,7 +47,8 @@ i {
 }
 
 .item1 {
-    width: 30%;
+    display: flex;
+    width: 40%;
     list-style: none;
     text-align: center;
     align-self: center;
@@ -55,10 +62,21 @@ i {
     align-self: center;
     font-size: 22px;
     color: #fff;
+    display: flex;
+    flex-direction: column;
 }
 
-.item2 ul{
-    list-style: none;
+#keyskillul li:focus{
+    color: red;
+    outline: none;
+}
+
+.subitem2 {
+    display: flex;
+    line-height: 2rem;
+}
+.subitem2:hover .editicon{
+    opacity: 1;
 }
 .item3 {
     width: 40%;
@@ -105,10 +123,66 @@ i {
     color: darkgrey;
 }
 
+.item1 i{
+    color: white;
+    font-size: 0.8rem;
+    margin-left: 10px;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+.item1:hover i{
+    opacity: 1;
+}
+
+.editicon {
+    color: white;
+    font-size: 0.8rem;
+    margin-left: 10px;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.editicon1 {
+    font-size: 1rem;
+    margin-left: 5px;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.abouthover:hover .editicon1{
+    opacity: 1;
+}
+
+.keyhover:hover .addlisticon,
+.keyhover:hover .dellisticon{
+    opacity: 1;
+}
+
+.addlisticon {
+    font-size: 1rem;
+    margin-left: 5px;
+    opacity: 0;
+    color: black;
+    transition: opacity .35s ease;
+}
+.dellisticon {
+    font-size: 1rem;
+    margin-left: 5px;
+    opacity: 0;
+    transition: opacity .35s ease;
+    width: 17%;
+}
+.themeselect {
+    position: fixed;
+    top: 0;
+    right: 450px;
+}
+
 @media only screen and (max-width: 905px){
     .container1{
         flex-direction: column;
         width: auto;
+        justify-content: flex-start;
     }
     
     .item1 {
@@ -133,5 +207,25 @@ i {
     .item4{
         width: 100%;
     }
+    
+    .item1 i{
+        opacity: 1;
+    }
+    
+    .editicon {
+        opacity: 1;
+    }
+    
+    .editicon1,
+    .addlisticon,
+    .dellisticon {
+        opacity: 1;
+    }
+    
+    .themeselect {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
 }
 

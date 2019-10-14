@@ -10,85 +10,101 @@
         <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     </head>
 	<body>
-
-            <div class="container1">
+            <div class="themeselect">
+                <span>theme</span>
+                <select class="select" id="select" onchange="changetheme();">
+                    <option>Original</option>
+                    <option>Dark</option>
+                </select>
+            </div>
+            
+            <div class="container1" id="container1">
+                
                 <div class="item1">
-                    <p>Teeranai  Wattanakitjakul</p>
+                    
+                    <p contenteditable="false" id="name">Teeranai  Wattanakitjakul</p>
+                    <i class="ion-edit" onclick="editname();">edit</i>
                 </div>
                 <div class="item2">
-                    <ul>
-                        <li><p><i class="ion-iphone headicon"></i>Tel : 083-684-6786</p></li>
-                        <li><p><i class="ion-email headicon"></i>Email : topfeeee@gmail.com</p></li>
-                    </ul>
+                    <div class="subitem2">
+                        <i class="ion-iphone headicon"></i>
+                        <p contenteditable="false" id="phone">Tel : 083-684-6786</p>
+                        <i class="ion-edit editicon" onclick="editphone();">edit</i>
+                    </div>
+                    <div class="subitem2">
+                        <i class="ion-email headicon"></i>
+                        <p contenteditable="false" id="email">Email : topfeeee@gmail.com</p>
+                        <i class="ion-edit editicon" onclick="editemail();">edit</i>
+                    </div>
                 </div>
             </div>
-            <div class="container2">
+            <div class="container2" id="container2">
                 <div class="item3">
                     <div>
                         <img src="t.jpg" width="40%">
                     </div>
                     <div>
-                        <p class="heading"><i class="ion-android-person"></i><strong>ABOUT ME</strong></p>
-                        <p class="abouttext">ประสบการ์ณทำงานด้าน IT Support กว่า 6 ปี มีความสนใจในด้าน Programming, Website และพร้อมที่จะเรียนรู้สิ่งใหม่ๆเสมอ</p>
+                        <p class="heading abouthover"><i class="ion-android-person"></i><strong id="strongtext">ABOUT ME</strong><i class="ion-edit editicon1" onclick="editabout();">edit</i></p>
+                        <p class="abouttext" id="aboutme">ประสบการ์ณทำงานด้าน IT Support กว่า 6 ปี มีความสนใจในด้าน Programming, Website และพร้อมที่จะเรียนรู้สิ่งใหม่ๆเสมอ</p>
                     </div>
                     <div>
-                         <p class="heading"><i class="ion-gear-b"></i><strong>Key Skills</strong></p>
-                                <ul>
-                                    <li><strong>Network</strong></li>
-                                    <li><strong>Linux Server, Desktop</strong></li>
-                                    <li><strong>Computer maintenance</strong></li>
-                                    <li><strong>Basic Programming</strong></li>
+                         <p class="heading keyhover"><i class="ion-gear-b"></i><strong id="strongtext1">Key Skills</strong><i class="ion-ios-plus-outline addlisticon" onclick="addLi();" id="addicon">add</i><i class="ion-backspace-outline dellisticon" onclick="delLi();">delete</i></p>
+                                <ul id="keyskillul">
+                                    <li tabindex="1">Network</li>
+                                    <li tabindex="1">Linux Server, Desktop</li>
+                                    <li tabindex="1">Computer maintenance</li>
+                                    <li tabindex="1">Basic Programming</li>
                                 </ul>
                     </div>
                     <div>
-                        <p class="heading"><i class="ion-settings"></i><strong>Technical Skills</strong></p>
-                                <ul>
-                                    <li><strong>Network : </strong>e.g. Ip address, manage network with mikrotik.</li>
-                                    <li><strong>Linux server, Desktop : </strong>centOS 7 e.g. ftp, mail, dns &amp; Ubuntu e.g. dhcp server, Ubuntu Desktop</li>
-                                    <li><strong>Computer maintenance : </strong>Hardware e.g. PC, iMac, Labtop &amp; Software License </li>
-                                    <li><strong>Basic Programming &amp; Scripting Languages : </strong>c#, vb, html, css, javascript.</li>
+                        <p class="heading keyhover"><i class="ion-settings"></i><strong id="strongtext2">Technical Skills</strong><i class="ion-ios-plus-outline addlisticon" onclick="addLi1();" id="addicon">add</i><i class="ion-backspace-outline dellisticon" onclick="delLi1();">delete</i></p>
+                                <ul id="techskillul">
+                                    <li tabindex="1"><strong>Network : </strong>e.g. Ip address, manage network with ion-ios-plus-outline editicon1mikrotik.</li>
+                                    <li tabindex="1"><strong>Linux server, Desktop : </strong>centOS 7 e.g. ftp, mail, dns &amp; Ubuntu e.g. dhcp server, Ubuntu Desktop</li>
+                                    <li tabindex="1"><strong>Computer maintenance : </strong>Hardware e.g. PC, iMac, Labtop &amp; Software License </li>
+                                    <li tabindex="1"><strong>Basic Programming &amp; Scripting Languages : </strong>c#, vb, html, css, javascript.</li>
                                 </ul>
                     </div>
                 </div>
                 <div class="item4">
                     <div>
-                         <p class="heading"><i class="ion-briefcase"></i><strong>EXPERIENCE</strong></p>
-                                <strong>Network Administrator</strong>
-                                <ul>
+                         <p class="heading"><i class="ion-briefcase"></i><strong id="strongtext3">EXPERIENCE</strong></p>
+                                <strong id="strongtext6">Network Administrator</strong>
+                                <ul id="subexperul1">
                                     <li>Coordinate with external outsource on moving current system to cloud-based.</li>
                                     <li>Design and Implement IT middleware infrastructure solutions including reverse proxy to support both present and future business requirements.</li>
                                     <li>Install, configure, administer and manage IT middleware infrastructure including reverse proxy under minimal supervision to ensure high performance / reliability / availability of systems can support business users and applications.</li>
                                 </ul>
-                                <strong>IT Support</strong>
-                                <ul>
+                                <strong id="strongtext7">IT Support</strong>
+                                <ul id="subexperul2">
                                     <li>ตรวจสอบการทำงานของระบบคอมพิวเตอร์ติดตั้ง,ดูแลปรับปรุง H/W PC,OS Windows,Linux OS,MacOS</li>
                                     <li>ดูแลระบบ LAN VLAN VPN Wireless, Internet Adsl</li>
                                     <li>จัดทำเอกสาร Asset</li>
                                 </ul>
                     </div>
                     <div>
-                        <p class="heading"><i class="ion-university"></i><strong>Education</strong></p>
-                                <h4>business computer</h4>
-                                <strong>thonburi commercial college</strong>
+                        <p class="heading"><i class="ion-university"></i><strong id="strongtext4">Education</strong></p>
+                                <h4 id="strongtext8">business computer</h4>
+                                <strong id="strongtext9">thonburi commercial college</strong>
                                 <span class="provience">Bangkok, Thailand</span>
                                 <p class="datetext">2012-2015</p>
                     </div>
                     <div>
                     
-                    <p class="heading"><i class="ion-arrow-graph-up-right"></i><strong>Training</strong></p>
-                                <strong>Udemy Online Course</strong>
-                                <ul>
+                    <p class="heading"><i class="ion-arrow-graph-up-right"></i><strong id="strongtext5">Training</strong></p>
+                                <strong id="strongtext10">Udemy Online Course</strong>
+                                <ul id="subtrainingul1">
                                     <li>Basic frontend Html+css</li>
                                     <li>Basic C#, vb programming</li>
                                     <li>Basic object oriented concepts &amp; Class</li>
                                 </ul>
-                                <strong>Code Camp Thailand</strong>
-                                <ul>
-                                    <li>Fullstack NodeJS Developer<span>กำลังศึกษา</span></li>
+                                <strong id="strongtext11">Code Camp Thailand</strong>
+                                <ul id="subtrainingul2">
+                                    <li>Fullstack NodeJS Developer<span>(กำลังศึกษา)</span></li>
                                 </ul></div>
                 </div>
                 
             </div>
-
+        <script src="script.js"></script>
 	</body>
 </html>
